@@ -1,0 +1,158 @@
+linux1hrisi@VirtualLinux:~$ mkdir "Linux Exam"
+linux1hrisi@VirtualLinux:~$ cd "Linux Exam"
+linux1hrisi@VirtualLinux:~/Linux Exam$ mkdir Files Strypes
+linux1hrisi@VirtualLinux:~/Linux Exam$ cd Files
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ touch doc{1..5}.txt
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ touch report{1..5}.doc
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ touch results{1..5}.doc
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ touch statistics{1..2}.xls
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ cd ../Strypes
+linux1hrisi@VirtualLinux:~/Linux Exam/Strypes$ mkdir Day01 Day02
+linux1hrisi@VirtualLinux:~/Linux Exam/Strypes$ cd ../..
+linux1hrisi@VirtualLinux:~$ cd "Linux Exam"
+linux1hrisi@VirtualLinux:~/Linux Exam$ tree
+.
+├── Files
+│   ├── doc1.txt
+│   ├── doc2.txt
+│   ├── doc3.txt
+│   ├── doc4.txt
+│   ├── doc5.txt
+│   ├── report1.doc
+│   ├── report2.doc
+│   ├── report3.doc
+│   ├── report4.doc
+│   ├── report5.doc
+│   ├── results1.doc
+│   ├── results2.doc
+│   ├── results3.doc
+│   ├── results4.doc
+│   ├── results5.doc
+│   ├── statistics1.xls
+│   └── statistics2.xls
+└── Strypes
+    ├── Day01
+    └── Day02
+
+4 directories, 17 files
+linux1hrisi@VirtualLinux:~/Linux Exam$ ls
+Files  Strypes
+linux1hrisi@VirtualLinux:~/Linux Exam$ cd Files
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ cp *.txt ../Strypes/Day01
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ cd ..
+linux1hrisi@VirtualLinux:~/Linux Exam$ tree
+.
+├── Files
+│   ├── doc1.txt
+│   ├── doc2.txt
+│   ├── doc3.txt
+│   ├── doc4.txt
+│   ├── doc5.txt
+│   ├── report1.doc
+│   ├── report2.doc
+│   ├── report3.doc
+│   ├── report4.doc
+│   ├── report5.doc
+│   ├── results1.doc
+│   ├── results2.doc
+│   ├── results3.doc
+│   ├── results4.doc
+│   ├── results5.doc
+│   ├── statistics1.xls
+│   └── statistics2.xls
+└── Strypes
+    ├── Day01
+    │   ├── doc1.txt
+    │   ├── doc2.txt
+    │   ├── doc3.txt
+    │   ├── doc4.txt
+    │   └── doc5.txt
+    └── Day02
+
+4 directories, 22 files
+linux1hrisi@VirtualLinux:~/Linux Exam$ cd Files
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ ls
+doc1.txt  doc3.txt  doc5.txt     report2.doc  report4.doc  results1.doc  results3.doc  results5.doc     statistics2.xls
+doc2.txt  doc4.txt  report1.doc  report3.doc  report5.doc  results2.doc  results4.doc  statistics1.xls
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ mv *.doc ../Strypes/Day02
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ mv statistics1.xls .statistics1.xls
+linux1hrisi@VirtualLinux:~/Linux Exam/Files$ cd ..
+linux1hrisi@VirtualLinux:~/Linux Exam$ tree 
+.
+├── Files
+│   ├── doc1.txt
+│   ├── doc2.txt
+│   ├── doc3.txt
+│   ├── doc4.txt
+│   ├── doc5.txt
+│   └── statistics2.xls
+└── Strypes
+    ├── Day01
+    │   ├── doc1.txt
+    │   ├── doc2.txt
+    │   ├── doc3.txt
+    │   ├── doc4.txt
+    │   └── doc5.txt
+    └── Day02
+        ├── report1.doc
+        ├── report2.doc
+        ├── report3.doc
+        ├── report4.doc
+        ├── report5.doc
+        ├── results1.doc
+        ├── results2.doc
+        ├── results3.doc
+        ├── results4.doc
+        └── results5.doc
+
+4 directories, 21 files
+linux1hrisi@VirtualLinux:~/Linux Exam$ tree -a
+.
+├── Files
+│   ├── doc1.txt
+│   ├── doc2.txt
+│   ├── doc3.txt
+│   ├── doc4.txt
+│   ├── doc5.txt
+│   ├── .statistics1.xls
+│   └── statistics2.xls
+└── Strypes
+    ├── Day01
+    │   ├── doc1.txt
+    │   ├── doc2.txt
+    │   ├── doc3.txt
+    │   ├── doc4.txt
+    │   └── doc5.txt
+    └── Day02
+        ├── report1.doc
+        ├── report2.doc
+        ├── report3.doc
+        ├── report4.doc
+        ├── report5.doc
+        ├── results1.doc
+        ├── results2.doc
+        ├── results3.doc
+        ├── results4.doc
+        └── results5.doc
+
+4 directories, 22 files
+linux1hrisi@VirtualLinux:~/Linux Exam$ rm -r Strypes/Day02
+linux1hrisi@VirtualLinux:~/Linux Exam$ tree
+.
+├── Files
+│   ├── doc1.txt
+│   ├── doc2.txt
+│   ├── doc3.txt
+│   ├── doc4.txt
+│   ├── doc5.txt
+│   └── statistics2.xls
+└── Strypes
+    └── Day01
+        ├── doc1.txt
+        ├── doc2.txt
+        ├── doc3.txt
+        ├── doc4.txt
+        └── doc5.txt
+
+
+

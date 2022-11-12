@@ -1,0 +1,8 @@
+sudo apt install git 
+git config --global user.name "linux1hrisi"
+git config --global user.email "hristina.vutova.vv@gmail.com"
+git clone https://github.com/VutovaHristina/Linux-Exam.git
+mkdir Ex{1..4}
+git add --all
+git commit –m “Exam”
+git push
